@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardUserItem"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_radius_16dp"
+    android:backgroundTint="?colorOnPrimary"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="24dp"
+    android:paddingBottom="18dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/ivUser"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:src="@drawable/ic_dummy"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/user_avatar" />
+
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:gravity="center"
+        tools:text="iqbalShafiq"
+        style="@style/Medium14Sp"
+        android:textColor="?colorPrimary"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/ivUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnDetails"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:background="@drawable/btn_radius_16dp"
+        android:backgroundTint="@color/green_accent"
+        android:text="@string/details"
+        style="@style/Medium14Sp"
+        android:textColor="@color/light_primary"
+        android:textAllCaps="false"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@id/tvUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLove"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:background="@drawable/ic_love"
+        app:tint="?colorPrimary"
+        app:layout_constraintEnd_toEndOf="@id/btnDetails"
+        app:layout_constraintTop_toTopOf="@id/ivUser"
+        android:contentDescription="@string/love_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

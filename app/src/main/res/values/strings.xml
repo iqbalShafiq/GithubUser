@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Github User</string>
+    <string name="welcome">Welcome!</string>
+    <string name="search_username">Search Username …</string>
+    <string name="list_of_users">List of Users</string>
+    <string name="user_avatar">user avatar</string>
+    <string name="followers">Followers</string>
+    <string name="following">Following</string>
+    <string name="repositories">%1$d Repositories</string>
+    <string name="gists">%1$d Gists</string>
+    <string name="icon_back">icon back</string>
+    <string name="search_result_is_empty">Search Result is Empty</string>
+    <string name="details">Details</string>
+    <string name="tab_text_1">Followers</string>
+    <string name="tab_text_2">Following</string>
+    <string name="there_s_an_error_when_fetching_api_d">There\'s an error when fetching api :\'D</string>
+    <string name="empty_message">We can\'t find match user</string>
+    <string name="empty_followers">User doesn\'t have any followers</string>
+    <string name="empty_following">User doesn\'t follow anyone</string>
+    <string name="love_icon">love icon</string>
+    <string name="you_don_t_have_any_favorite_users">You don\'t have any favorite users</string>
+    <string name="your_favorite_list">Your Favorite List</string>
+</resources>

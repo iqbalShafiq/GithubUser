@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipeRefresh"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="?colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.DetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?colorPrimary"
+        android:paddingTop="55dp"
+        android:paddingHorizontal="30dp"
+        android:clipToPadding="false">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <ImageView
+                        android:id="@+id/ivUser"
+                        android:layout_width="72dp"
+                        android:layout_height="72dp"
+                        android:src="@drawable/ic_dummy"
+                        android:contentDescription="@string/user_avatar" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginStart="24dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvTitleFollowers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/followers"
+                            style="@style/Medium18Sp" />
+
+                        <TextView
+                            android:id="@+id/tvFollowers"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="24"
+                            style="@style/Regular14Sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginStart="24dp"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tvTitleFollowing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/following"
+                            style="@style/Medium18Sp" />
+
+                        <TextView
+                            android:id="@+id/tvFollowing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="24"
+                            style="@style/Regular14Sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Iqbal Shafiq Rozaan"
+                    style="@style/SemiBold18Sp"
+                    android:layout_marginTop="18dp" />
+
+                <TextView
+                    android:id="@+id/tvUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="iqbalsyafiq"
+                    style="@style/Medium14Sp"
+                    android:layout_marginTop="7dp" />
+
+                <TextView
+                    android:id="@+id/tvError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/there_s_an_error_when_fetching_api_d"
+                    style="@style/Medium14Sp"
+                    android:visibility="gone"
+                    android:textColor="@color/red_accent"
+                    android:layout_marginTop="7dp" />
+
+                <TextView
+                    android:id="@+id/tvCompany"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="PT Digital Asia Solusindo"
+                    style="@style/Regular12Sp"
+                    android:layout_marginTop="7dp" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Kediri"
+                    style="@style/Regular12Sp"
+                    android:layout_marginTop="7dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:id="@+id/tvRepository"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="24 Repositories"
+                        style="@style/Regular12Sp" />
+
+                    <View
+                        android:id="@+id/dots"
+                        android:layout_width="5dp"
+                        android:layout_height="5dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@drawable/ic_circle" />
+
+                    <TextView
+                        android:id="@+id/tvGist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="20 Gist"
+                        style="@style/Regular12Sp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:background="?colorPrimary"
+                    app:tabTextColor="?colorOnPrimary"
+                    app:tabTextAppearance="@style/Medium14Sp"
+                    app:tabGravity="start"
+                    app:tabIndicatorColor="?colorOnPrimary"/>
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="-30dp"
+                    android:layout_marginEnd="-30dp"/>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnBack"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_back"
+            android:backgroundTint="@color/red_accent"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/icon_back" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnLove"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:src="@drawable/ic_love"
+            app:backgroundTint="@color/green_accent"
+            android:layout_marginBottom="55dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:contentDescription="@string/icon_back" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
